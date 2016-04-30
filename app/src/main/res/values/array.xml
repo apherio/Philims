@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sorting_criteria_key">
+        <item>Most popular</item>
+        <item>Highest-rated</item>
+        <item>Highest grossing</item>
+    </string-array>
+    <string-array name="sort_criteria_value">
+        <item>popularity.desc</item>
+        <item>vote_count.desc</item>
+        <item>revenue.desc</item>
+    </string-array>
+</resources>
