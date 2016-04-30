@@ -11,7 +11,7 @@ android {
         versionCode 1
         versionName "1.0"
 
-        buildConfigField "String", "MOVIE_DB_API_KEY", '"YOUR_API_KEY_GOES_HERE"'
+        buildConfigField "String", "MOVIE_DB_API_KEY", '"YOUR_API_KEY_GOES"'
     }
     buildTypes {
         release {
