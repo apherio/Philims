@@ -24,7 +24,7 @@ You must provide your own API key in order to build the app. When you get it, ju
 
 ## Artwork
 
-![screen](../Philims/app/src/main/res/drawable-xhdpi/web_hi_res_512.png)
+![screen](../master/app/src/main/res/drawable-xhdpi/web_hi_res_512.png)
 
 
 
