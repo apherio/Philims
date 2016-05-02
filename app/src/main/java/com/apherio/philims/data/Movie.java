@@ -1,137 +1,250 @@
 package com.apherio.philims.data;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
+import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by apherio on 19/4/2016.
- * TODO: USE PARCEBLE OR SERIALIZABLE IN NEXT PROJECT PHASE
- * Basic POJO which has to be redone in next phase
+ *
+ * Basic POJO
  */
-public class Movie {
-    private boolean adult;
-    private String backdrop_path;
-    private List genre_ids;
-    private Number id;
-    private String original_language;
-    private String original_title;
-    private String overview;
-    private Number popularity;
-    private String poster_path;
-    private String release_date;
-    private String title;
-    private boolean video;
-    private Number vote_average;
-    private Number vote_count;
 
-    public boolean getAdult() {
-        return this.adult;
-    }
+    public final class Movie implements Serializable {
 
-    public void setAdult(boolean adult) {
-        this.adult = adult;
-    }
+        @Expose
+        private Boolean adult;
+        @SerializedName("backdrop_path")
+        @Expose
+        private String backdropPath;
+        @SerializedName("genre_ids")
+        @Expose
+        private List<Integer> genreIds = new ArrayList<Integer>();
+        @Expose
+        private Integer id;
+        @SerializedName("original_language")
+        @Expose
+        private String originalLanguage;
+        @SerializedName("original_title")
+        @Expose
+        private String originalTitle;
+        @Expose
+        private String overview;
+        @SerializedName("release_date")
+        @Expose
+        private String releaseDate;
+        @SerializedName("poster_path")
+        @Expose
+        private String posterPath;
+        @Expose
+        private Double popularity;
+        @Expose
+        private String title;
+        @Expose
+        private Boolean video;
+        @SerializedName("vote_average")
+        @Expose
+        private Double voteAverage;
+        @SerializedName("vote_count")
+        @Expose
+        private Integer voteCount;
 
-    public String getBackdrop_path() {
-        return this.backdrop_path;
-    }
+        /**
+         * @return The adult
+         */
+        public Boolean getAdult() {
+            return adult;
+        }
 
-    public void setBackdrop_path(String backdrop_path) {
-        this.backdrop_path = backdrop_path;
-    }
+        /**
+         * @param adult The adult
+         */
+        public void setAdult(Boolean adult) {
+            this.adult = adult;
+        }
 
-    public List getGenre_ids() {
-        return this.genre_ids;
-    }
+        /**
+         * @return The backdropPath
+         */
+        public String getBackdropPath() {
+            return backdropPath;
+        }
 
-    public void setGenre_ids(List genre_ids) {
-        this.genre_ids = genre_ids;
-    }
+        /**
+         * @param backdropPath The backdrop_path
+         */
+        public void setBackdropPath(String backdropPath) {
+            this.backdropPath = backdropPath;
+        }
 
-    public Number getId() {
-        return this.id;
-    }
+        /**
+         * @return The genreIds
+         */
+        public List<Integer> getGenreIds() {
+            return genreIds;
+        }
 
-    public void setId(Number id) {
-        this.id = id;
-    }
+        /**
+         * @param genreIds The genre_ids
+         */
+        public void setGenreIds(List<Integer> genreIds) {
+            this.genreIds = genreIds;
+        }
 
-    public String getOriginal_language() {
-        return this.original_language;
-    }
+        /**
+         * @return The id
+         */
+        public Integer getId() {
+            return id;
+        }
 
-    public void setOriginal_language(String original_language) {
-        this.original_language = original_language;
-    }
+        /**
+         * @param id The id
+         */
+        public void setId(Integer id) {
+            this.id = id;
+        }
 
-    public String getOriginal_title() {
-        return this.original_title;
-    }
+        /**
+         * @return The originalLanguage
+         */
+        public String getOriginalLanguage() {
+            return originalLanguage;
+        }
 
-    public void setOriginal_title(String original_title) {
-        this.original_title = original_title;
-    }
+        /**
+         * @param originalLanguage The original_language
+         */
+        public void setOriginalLanguage(String originalLanguage) {
+            this.originalLanguage = originalLanguage;
+        }
 
-    public String getOverview() {
-        return this.overview;
-    }
+        /**
+         * @return The originalTitle
+         */
+        public String getOriginalTitle() {
+            return originalTitle;
+        }
 
-    public void setOverview(String overview) {
-        this.overview = overview;
-    }
+        /**
+         * @param originalTitle The original_title
+         */
+        public void setOriginalTitle(String originalTitle) {
+            this.originalTitle = originalTitle;
+        }
 
-    public Number getPopularity() {
-        return this.popularity;
-    }
+        /**
+         * @return The overview
+         */
+        public String getOverview() {
+            return overview;
+        }
 
-    public void setPopularity(Number popularity) {
-        this.popularity = popularity;
-    }
+        /**
+         * @param overview The overview
+         */
+        public void setOverview(String overview) {
+            this.overview = overview;
+        }
 
-    public String getPoster_path() {
-        return this.poster_path;
-    }
+        /**
+         * @return The releaseDate
+         */
+        public String getReleaseDate() {
+            return releaseDate;
+        }
 
-    public void setPoster_path(String poster_path) {
-        this.poster_path = poster_path;
-    }
+        /**
+         * @param releaseDate The release_date
+         */
+        public void setReleaseDate(String releaseDate) {
+            this.releaseDate = releaseDate;
+        }
 
-    public String getRelease_date() {
-        return this.release_date;
-    }
+        /**
+         * @return The posterPath
+         */
+        public String getPosterPath() {
+            return posterPath;
+        }
 
-    public void setRelease_date(String release_date) {
-        this.release_date = release_date;
-    }
+        /**
+         * @param posterPath The poster_path
+         */
+        public void setPosterPath(String posterPath) {
+            this.posterPath = posterPath;
+        }
 
-    public String getTitle() {
-        return this.title;
-    }
+        /**
+         * @return The popularity
+         */
+        public Double getPopularity() {
+            return popularity;
+        }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
+        /**
+         * @param popularity The popularity
+         */
+        public void setPopularity(Double popularity) {
+            this.popularity = popularity;
+        }
 
-    public boolean getVideo() {
-        return this.video;
-    }
+        /**
+         * @return The title
+         */
+        public String getTitle() {
+            return title;
+        }
 
-    public void setVideo(boolean video) {
-        this.video = video;
-    }
+        /**
+         * @param title The title
+         */
+        public void setTitle(String title) {
+            this.title = title;
+        }
 
-    public Number getVote_average() {
-        return this.vote_average;
-    }
+        /**
+         * @return The video
+         */
+        public Boolean getVideo() {
+            return video;
+        }
 
-    public void setVote_average(Number vote_average) {
-        this.vote_average = vote_average;
-    }
+        /**
+         * @param video The video
+         */
+        public void setVideo(Boolean video) {
+            this.video = video;
+        }
 
-    public Number getVote_count() {
-        return this.vote_count;
-    }
+        /**
+         * @return The voteAverage
+         */
+        public Double getVoteAverage() {
+            return voteAverage;
+        }
 
-    public void setVote_count(Number vote_count) {
-        this.vote_count = vote_count;
+        /**
+         * @param voteAverage The vote_average
+         */
+        public void setVoteAverage(Double voteAverage) {
+            this.voteAverage = voteAverage;
+        }
+
+        /**
+         * @return The voteCount
+         */
+        public Integer getVoteCount() {
+            return voteCount;
+        }
+
+        /**
+         * @param voteCount The vote_count
+         */
+        public void setVoteCount(Integer voteCount) {
+            this.voteCount = voteCount;
+        }
     }
-}

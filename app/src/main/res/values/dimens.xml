@@ -8,6 +8,10 @@
 
     <dimen name="item_margin">8dp</dimen>
     <dimen name="item_margin_half">8dp</dimen>
+    <dimen name="expandedTitleMarginBottom">32dp</dimen>
+    <dimen name="expandedTitleMarginEnd">64dp</dimen>
+    <dimen name="expandedTitleMarginStart">48dp</dimen>
+
 
     <!-- Texts -->
     <dimen name="text_size_xsmall">11sp</dimen>
@@ -22,7 +26,6 @@
     <dimen name="keyline_1_minus_8dp">8dp</dimen>
     <dimen name="keyline_2">72dp</dimen>
     <dimen name="keyline_2_minus_16dp">56dp</dimen>
-
     <dimen name="columnWidth">120dp</dimen>
 
 

@@ -44,14 +44,14 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MovieViewH
         holder.mTextView.setText(MovieList.get(mContext)
                 .getResultsArrayList()
                 .get(position)
-                .getOriginal_title());
+                .getOriginalTitle());
 
 
         Picasso
                 .with(mContext)
                 .load(BASE_IMG_URL + MovieList.get(mContext)
                         .getResultsArrayList().get(position)
-                        .getPoster_path())
+                        .getPosterPath())
                 .placeholder(R.drawable.placeholder_poster)
                 .into(holder.mImageView);
 

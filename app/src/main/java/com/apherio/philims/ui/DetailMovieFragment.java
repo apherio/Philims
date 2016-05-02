@@ -57,12 +57,12 @@ public class DetailMovieFragment extends Fragment {
 
         CollapsingToolbarLayout collapsingToolbarLayout = (CollapsingToolbarLayout) view.findViewById(R.id.collapsing_toolbar);
         final CollapsingToolbarLayout templayout = collapsingToolbarLayout;
-        collapsingToolbarLayout.setTitle(MovieList.get(getActivity()).getSingleResultByPosition(mItemPosition).getOriginal_title());
+        collapsingToolbarLayout.setTitle(MovieList.get(getActivity()).getSingleResultByPosition(mItemPosition).getOriginalTitle());
         mFormatter = new SimpleDateFormat("yyyy-MM-dd");
 
 
         final ImageView imageView = (ImageView) view.findViewById(R.id.detail_header_imageview);
-        String header_image = MovieList.get(getActivity()).getSingleResultByPosition(mItemPosition).getBackdrop_path();
+        String header_image = MovieList.get(getActivity()).getSingleResultByPosition(mItemPosition).getBackdropPath();
         Picasso.with(getActivity())
                 .load(BASE_URl + header_image)
                 .into(imageView, PicassoPalette.with(BASE_URl + header_image, imageView)
@@ -73,9 +73,9 @@ public class DetailMovieFragment extends Fragment {
                 );
 
         collapsingToolbarLayout = templayout;
-        rating.setText(String.valueOf(MovieList.get(getActivity()).getSingleResultByPosition(mItemPosition).getVote_average()));
-        Picasso.with(getActivity()).load("http://image.tmdb.org/t/p/w185" + MovieList.get(getActivity()).getSingleResultByPosition(mItemPosition).getPoster_path()).into(poster);
-        releaseDate.setText(MovieList.get(getActivity()).getSingleResultByPosition(mItemPosition).getRelease_date());
+        rating.setText(String.valueOf(MovieList.get(getActivity()).getSingleResultByPosition(mItemPosition).getVoteAverage()));
+        Picasso.with(getActivity()).load("http://image.tmdb.org/t/p/w185" + MovieList.get(getActivity()).getSingleResultByPosition(mItemPosition).getPosterPath()).into(poster);
+        releaseDate.setText(MovieList.get(getActivity()).getSingleResultByPosition(mItemPosition).getReleaseDate());
         plot.setText(MovieList.get(getActivity()).getSingleResultByPosition(mItemPosition).getOverview());
 
         return view;

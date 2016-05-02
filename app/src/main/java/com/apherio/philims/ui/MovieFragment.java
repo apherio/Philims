@@ -109,7 +109,7 @@ public class MovieFragment extends Fragment {
         super.onStart();
         if (isConnected()) {
             SharedPreferences sortPref = PreferenceManager.getDefaultSharedPreferences(getActivity());
-            String sort_type = sortPref.getString(getResources().getString(R.string.pref_key), "popularity.desc");
+            String sort_type = sortPref.getString(getResources().getString(R.string.pref_key), "popular");
             RestApi(sort_type);
 
         } else {
@@ -144,6 +144,8 @@ public class MovieFragment extends Fragment {
         //Calling the retrofit RestAdapter to initalize Movie in Pojo
         RestAdapter restAdapter = new RestAdapter.Builder().setEndpoint(BASE_URL).build();
         MoviesApiService moviesApiService = restAdapter.create(MoviesApiService.class);
+       restAdapter.setLogLevel(RestAdapter.LogLevel.FULL);
+
         moviesApiService.getResponse(sortby, BuildConfig.MOVIE_DB_API_KEY, new Callback<MovieResponse>() {
             @Override
             public void success(MovieResponse movieResponse, Response response) {
@@ -151,6 +153,8 @@ public class MovieFragment extends Fragment {
                 //initializing the adapter
                 MoviesAdapter adapter = new MoviesAdapter(getActivity());
 
+               //Clear  old adapter result
+                MovieList.get(getActivity()).getResultsArrayList().clear();
                 //Condtion to check if the Previously selected Type is equal to Current Selected
                 if (previousPref.equals(sortby)) {
                     MovieList.get(getActivity()).getResultsArrayList().clear();

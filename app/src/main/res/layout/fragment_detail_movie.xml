@@ -17,9 +17,9 @@
             android:layout_height="match_parent"
             android:fitsSystemWindows="true"
             app:contentScrim="@color/colorPrimary"
-            app:expandedTitleMarginBottom="32dp"
-            app:expandedTitleMarginEnd="64dp"
-            app:expandedTitleMarginStart="48dp"
+            app:expandedTitleMarginBottom="@dimen/expandedTitleMarginBottom"
+            app:expandedTitleMarginEnd="@dimen/expandedTitleMarginEnd"
+            app:expandedTitleMarginStart="@dimen/expandedTitleMarginStart"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
             <com.flaviofaria.kenburnsview.KenBurnsView
